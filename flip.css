@@ -1,0 +1,90 @@
+.text{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+.flip-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flip-inner{
+    width: 300px;
+    height: 450px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+.front-flip{
+    background-color: rgb(255, 242, 218);
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.rear-flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(13, 13, 212);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    overflow: hidden;
+}
+.image{
+    width: 240px;
+    height: 200px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.front-flip .rear-flip{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.flip-inner:hover{
+    transform: rotatey(180deg);
+}
+.info{
+    padding: 20px;
+    text-transform: capitalize;
+    color: white;
+}
+.star{
+    margin-top: 15px;
+}
+button{
+    width: 110px;
+    height: 40px;
+    display: flex;
+    border: 2px solid white;
+   
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgb(13, 13, 212);
+    color: white;
+    cursor: pointer;
+    
+}
+.button{
+    display: flex;
+    gap: 15px;
+    margin-top:20px ;
+    box-shadow: none;
+}
+button:hover{
+    background-color: black;
+}
